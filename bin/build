@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+docker build -t webcam2rtsp:devel -f x86.Dockerfile .

@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+docker run --name webcam2rtsp --hostname webcam2rtsp webcam2rtsp:devel
+# NONONONO docker run --entrypoint bash --rm        --device /dev/video2:/dev/video0 -it --name webcam2rtsp --hostname webcam2rtsp -p9951:9951 -p9950:9950 webcam2rtsp:devel
+# docker run --entrypoint bash --rm --privileged -v /dev/video2:/dev/video0:ro -it --name webcam2rtsp --hostname webcam2rtsp -p9951:9951 -p9950:9950 webcam2rtsp:devel
+
+
+### ffmpeg -f video4linux2 -s 640x480 -r 10 -i /dev/video0 http://127.0.0.1:9951/feed1.ffm
